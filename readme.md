@@ -116,3 +116,52 @@ ORDER BY Vehicles.vehicle_id;
 |------------|--------------|-------|-------|---------------------|--------------|-------------|
 | 3          | Yamaha R15   | bike  | 2023  | GHI-789             | 30.00        | available   |
 | 4          | Ford F-150   | truck | 2020  | JKL-012             | 100.00       | maintenance |
+
+
+
+
+### Query 3: WHERE – Available Vehicles of Type 'car'
+```sql
+SELECT 
+    vehicle_id,
+    name,
+    type,
+    model,
+    registration_number,
+    rental_price,
+    status
+FROM 
+    Vehicles
+WHERE 
+    type = 'car' 
+    AND status = 'available'
+ORDER BY Vehicles.vehicle_id;
+```
+
+**Sample Result:**
+
+| vehicle_id | name           | type | model | registration_number | rental_price | status    |
+|------------|----------------|------|-------|---------------------|--------------|-----------|
+| 1          | Toyota Corolla | car  | 2022  | ABC-123             | 50.00        | available |
+
+
+
+### Query 4: GROUP BY & HAVING – Vehicles with More Than 2 Bookings
+```sql
+SELECT 
+    Vehicles.name AS vehicle_name,
+    COUNT(Bookings.booking_id) AS total_bookings
+FROM 
+    Vehicles
+INNER JOIN 
+    Bookings ON Vehicles.vehicle_id = Bookings.vehicle_id
+GROUP BY 
+    Vehicles.vehicle_id, Vehicles.name
+HAVING 
+    COUNT(Bookings.booking_id) > 2;
+```
+**Sample Result:**
+
+| vehicle_name | total_bookings |
+|--------------|----------------|
+| Honda Civic  | 3              |
