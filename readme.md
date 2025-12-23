@@ -87,3 +87,32 @@ INNER JOIN
 | 2          | Alice         | Honda Civic    | 2023-11-01   | 2023-11-03   | completed |
 | 3          | Charlie       | Honda Civic    | 2023-12-01   | 2023-12-02   | confirmed |
 | 4          | Alice         | Toyota Corolla | 2023-12-10   | 2023-12-12   | pending   |
+
+
+
+### Query 2: NOT EXISTS – Vehicles Never Booked
+```sql
+SELECT 
+    Vehicles.vehicle_id,
+    Vehicles.name,
+    Vehicles.type,
+    Vehicles.model,
+    Vehicles.registration_number,
+    Vehicles.rental_price,
+    Vehicles.status
+FROM 
+    Vehicles
+WHERE 
+    NOT EXISTS (
+        SELECT 1 
+        FROM Bookings 
+        WHERE Bookings.vehicle_id = Vehicles.vehicle_id
+    )
+ORDER BY Vehicles.vehicle_id;
+```
+**Sample Result:**
+
+| vehicle_id | name         | type  | model | registration_number | rental_price | status      |
+|------------|--------------|-------|-------|---------------------|--------------|-------------|
+| 3          | Yamaha R15   | bike  | 2023  | GHI-789             | 30.00        | available   |
+| 4          | Ford F-150   | truck | 2020  | JKL-012             | 100.00       | maintenance |
