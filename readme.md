@@ -1,4 +1,4 @@
-# Vehicle Rental System - Database Design & SQL Queries
+# Vehicle Rental System - Database Design & SQL(postgresql) Queries
 
 ## Project Overview
 
