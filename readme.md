@@ -30,6 +30,33 @@ The design fully supports the required business logic: unique emails and registr
 
 Foreign key constraints with `ON DELETE CASCADE` ensure referential integrity.
 
+
+**Users Table (Sample Data)**
+
+| user_id | name    | email              | phone      | role     |
+|---------|---------|--------------------|------------|----------|
+| 1       | Alice   | alice@example.com  | 1234567890 | Customer |
+| 2       | Bob     | bob@example.com    | 0987654321 | Admin    |
+| 3       | Charlie | charlie@example.com| 1122334455 | Customer |
+
+**Vehicles Table (Sample Data)**
+
+| vehicle_id | name           | type  | model | registration_number | rental_price | status      |
+|------------|----------------|-------|-------|---------------------|--------------|-------------|
+| 1          | Toyota Corolla | car   | 2022  | ABC-123             | 50.00        | available   |
+| 2          | Honda Civic    | car   | 2021  | DEF-456             | 60.00        | rented      |
+| 3          | Yamaha R15     | bike  | 2023  | GHI-789             | 30.00        | available   |
+| 4          | Ford F-150     | truck | 2020  | JKL-012             | 100.00       | maintenance |
+
+**Bookings Table (Sample Data)**
+
+| booking_id | user_id | vehicle_id | start_date   | end_date     | status    | total_cost |
+|------------|---------|------------|--------------|--------------|-----------|------------|
+| 1          | 1       | 2          | 2023-10-01   | 2023-10-05   | completed | 240.00     |
+| 2          | 1       | 2          | 2023-11-01   | 2023-11-03   | completed | 120.00     |
+| 3          | 3       | 2          | 2023-12-01   | 2023-12-02   | confirmed | 60.00      |
+| 4          | 1       | 1          | 2023-12-10   | 2023-12-12   | pending   | 100.00     |
+
 ## SQL Queries (queries.sql)
 
 The following queries demonstrate the required SQL concepts using the sample data provided in the assignment:
