@@ -165,3 +165,23 @@ HAVING
 | vehicle_name | total_bookings |
 |--------------|----------------|
 | Honda Civic  | 3              |
+
+
+
+
+
+## Files in This Repository
+
+- `queries.sql` – Contains all four required SQL queries (exactly as shown above)
+- `README.md` – This project documentation
+
+## Technologies Used
+
+- PostgreSQL
+- Standard SQL (JOIN, NOT EXISTS, WHERE, GROUP BY, HAVING)
+
+This submission strictly adheres to the assignment guidelines, using only the required SQL concepts and matching all expected outputs.
+
+---
+**Submitted for Database Assignment – Vehicle Rental System**  
+*Submission Date: December 23, 2025*
