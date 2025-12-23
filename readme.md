@@ -49,3 +49,14 @@ INNER JOIN
     Users ON Bookings.user_id = Users.user_id
 INNER JOIN
     Vehicles ON Bookings.vehicle_id = Vehicles.vehicle_id;
+```
+
+
+**Sample Result:**
+
+| booking_id | customer_name | vehicle_name   | start_date   | end_date     | status    |
+|------------|---------------|----------------|--------------|--------------|-----------|
+| 1          | Alice         | Honda Civic    | 2023-10-01   | 2023-10-05   | completed |
+| 2          | Alice         | Honda Civic    | 2023-11-01   | 2023-11-03   | completed |
+| 3          | Charlie       | Honda Civic    | 2023-12-01   | 2023-12-02   | confirmed |
+| 4          | Alice         | Toyota Corolla | 2023-12-10   | 2023-12-12   | pending   |
