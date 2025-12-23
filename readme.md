@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project implements a simple **Vehicle Rental System** database using **PostgreSQL**. The system manages users (customers and admins), vehicles (cars, bikes, trucks), and rental bookings. It demonstrates core relational database concepts including table design with primary/foreign keys, data integrity constraints, and fundamental SQL querying techniques.
+This project implements a simple **Vehicle Rental System** database using **PostgreSQL**. The system manages users (customers and admins), vehicles (cars, bikes, trucks), and rental bookings. It demonstrates core relational database concepts including table design with primary/foreign keys, data integrity constraints, and fundamental SQL (postgresql) querying techniques.
 
 The database consists of three main tables:
 - **Users** – Stores user information with roles (Admin/Customer)
@@ -180,7 +180,7 @@ HAVING
 - PostgreSQL
 - Standard SQL (JOIN, NOT EXISTS, WHERE, GROUP BY, HAVING)
 
-This submission strictly adheres to the assignment guidelines, using only the required SQL concepts and matching all expected outputs.
+This submission strictly adheres to the assignment guidelines, using only the required SQL (postgresql) concepts and matching all expected outputs.
 
 ---
 **Submitted for Database Assignment – Vehicle Rental System**  
