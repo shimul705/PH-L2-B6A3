@@ -13,11 +13,13 @@ The design fully supports the required business logic: unique emails and registr
 
 ## Database Schema Summary
 
-### ERD Link 
-```
-https://lucid.app/lucidchart/f67b9b3f-f0ae-4476-8268-c3f41fe382f7/edit?viewport_loc=-747%2C-1139%2C2300%2C1016%2C0_0&invitationId=inv_33e862bc-e7e0-4059-9456-e0fd9efa8912
+# 📊 Entity Relationship Diagram (ERD)
 
-```
+You can view the interactive database design and relationship structure for this project on Lucidchart:
+
+**[👉 View ERD on Lucidchart](https://lucid.app/lucidchart/f67b9b3f-f0ae-4476-8268-c3f41fe382f7/edit?viewport_loc=-747%2C-1139%2C2300%2C1016%2C0_0&invitationId=inv_33e862bc-e7e0-4059-9456-e0fd9efa8912)**
+
+
 ### Users Table
 - `user_id` (SERIAL PK)
 - `name`, `email` (UNIQUE), `password`, `phone`, `role` (Admin/Customer)
